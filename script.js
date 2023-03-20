@@ -49,7 +49,7 @@ function swap(el1, el2) {
             setTimeout(() => {
                 array_elements.insertBefore(el2, el1);
                 resolve();
-            }, 250);
+            }, 450);
         });
     });
 }
@@ -57,32 +57,28 @@ function swap(el1, el2) {
 async function bubble_sort() {
     let blocks = document.querySelectorAll(".block");
 
-    for (var i = 0; i < blocks.length; i += 1) {
-        for (var j = 0; j < blocks.length - i - 1; j += 1) {
-            blocks[j].style.backgroundColor = "#111";
-            blocks[j + 1].style.backgroundColor = "#111";
+    for (let i = 0; i < blocks.length; i += 1) {
+        for (let j = 0; j < blocks.length - i - 1; j += 1) {
+            blocks[j].style.backgroundColor = "#feca57";
+            blocks[j + 1].style.backgroundColor = "#feca57";
 
-            // Waiting for 100 ms between comparisons
+            // Waiting for 100 ms before comparisons
             await new Promise(resolve =>
-                setTimeout(() => {
-                    resolve();
-                }, 100)
+                setTimeout(() => resolve(), 100)
             );
 
-            console.log("run");
-            var value1 = Number(blocks[j].childNodes[0].innerHTML);
-            var value2 = Number(blocks[j + 1]
-                .childNodes[0].innerHTML);
+            let value1 = Number(blocks[j].childNodes[0].innerHTML);
+            let value2 = Number(blocks[j + 1].childNodes[0].innerHTML);
 
             if (value1 > value2) {
                 await swap(blocks[j], blocks[j + 1]);
                 blocks = document.querySelectorAll(".block");
             }
 
-            blocks[j].style.backgroundColor = "#ccc";
-            blocks[j + 1].style.backgroundColor = "#ccc";
+            blocks[j].style.backgroundColor = "#f368e0";
+            blocks[j + 1].style.backgroundColor = "#f368e0";
         }
 
-        blocks[blocks.length - i - 1].style.backgroundColor = "#FF3300";
+        blocks[blocks.length - i - 1].style.backgroundColor = "#222f3e";
     }
 }
