@@ -15,7 +15,7 @@ function show_value() {
     label_element.innerHTML = size
 }
 
-let get_random_number = () => Math.ceil(Math.random() * 30)
+let get_random_number = () => Math.ceil(Math.random() * 100)
 
 function clear_blocks() {
     while (array_elements.firstChild)
@@ -45,7 +45,7 @@ function swap(el1, el2) {
         el2.style.transform = temp;
 
         window.requestAnimationFrame(() => {
-            // Waiting for 0.25 sec
+            // Waiting for 250 ms
             setTimeout(() => {
                 array_elements.insertBefore(el2, el1);
                 resolve();
@@ -57,16 +57,12 @@ function swap(el1, el2) {
 async function bubble_sort(delay = 100) {
     let blocks = document.querySelectorAll(".block");
 
-    // BubbleSort Algorithm
     for (var i = 0; i < blocks.length; i += 1) {
         for (var j = 0; j < blocks.length - i - 1; j += 1) {
+            blocks[j].style.backgroundColor = "#111";
+            blocks[j + 1].style.backgroundColor = "#111";
 
-            // To change background-color of the
-            // blocks to be compared
-            blocks[j].style.backgroundColor = "#FF4949";
-            blocks[j + 1].style.backgroundColor = "#FF4949";
-
-            // Waiting for 0.1 sec
+            // Waiting for 100 ms
             await new Promise(resolve =>
                 setTimeout(() => {
                     resolve();
@@ -78,20 +74,16 @@ async function bubble_sort(delay = 100) {
             var value2 = Number(blocks[j + 1]
                 .childNodes[0].innerHTML);
 
-            // Comparing value of two blocks
             if (value1 > value2) {
                 await swap(blocks[j], blocks[j + 1]);
                 blocks = document.querySelectorAll(".block");
             }
 
-            // Changing the color to the previous one
-            blocks[j].style.backgroundColor = "#6b5b95";
-            blocks[j + 1].style.backgroundColor = "#6b5b95";
+            blocks[j].style.backgroundColor = "#ccc";
+            blocks[j + 1].style.backgroundColor = "#ccc";
         }
 
-        // Changing the color of greatest element 
-        // Found in the above traversal
         blocks[blocks.length - i - 1]
-            .style.backgroundColor = "#13CE66";
+            .style.backgroundColor = "#FF3300";
     }
 }
