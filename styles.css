@@ -13,9 +13,11 @@
 section {
     height: 380px;
     position: relative;
-    margin-top: 64px;
+    margin-top: 1rem;
     overflow-x: scroll;
     padding: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
 }
 
 .block {
