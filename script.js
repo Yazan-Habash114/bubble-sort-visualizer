@@ -45,7 +45,7 @@ function swap(el1, el2) {
         el2.style.transform = temp;
 
         window.requestAnimationFrame(() => {
-            // Waiting for 250 ms
+            // Waiting for 250 ms between movements
             setTimeout(() => {
                 array_elements.insertBefore(el2, el1);
                 resolve();
@@ -54,7 +54,7 @@ function swap(el1, el2) {
     });
 }
 
-async function bubble_sort(delay = 100) {
+async function bubble_sort() {
     let blocks = document.querySelectorAll(".block");
 
     for (var i = 0; i < blocks.length; i += 1) {
@@ -62,11 +62,11 @@ async function bubble_sort(delay = 100) {
             blocks[j].style.backgroundColor = "#111";
             blocks[j + 1].style.backgroundColor = "#111";
 
-            // Waiting for 100 ms
+            // Waiting for 100 ms between comparisons
             await new Promise(resolve =>
                 setTimeout(() => {
                     resolve();
-                }, delay)
+                }, 100)
             );
 
             console.log("run");
@@ -83,7 +83,6 @@ async function bubble_sort(delay = 100) {
             blocks[j + 1].style.backgroundColor = "#ccc";
         }
 
-        blocks[blocks.length - i - 1]
-            .style.backgroundColor = "#FF3300";
+        blocks[blocks.length - i - 1].style.backgroundColor = "#FF3300";
     }
 }

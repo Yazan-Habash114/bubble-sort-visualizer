@@ -52,3 +52,7 @@ button:hover {
     background-color: #c22700;
     color: #ddd;
 }
+
+input {
+    width: 400px;
+}
