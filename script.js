@@ -64,7 +64,7 @@ function swap(el1, el2) {
         el2.style.transform = temp
 
         window.requestAnimationFrame(() => {
-            // Waiting for speed between movements
+            // Wait for milliseconds between movements according to speed_dict
             setTimeout(() => {
                 array_elements.insertBefore(el2, el1)
                 resolve()
@@ -81,7 +81,7 @@ async function bubble_sort() {
             blocks[j].style.backgroundColor = "#feca57"
             blocks[j + 1].style.backgroundColor = "#feca57"
 
-            // Waiting for 100 ms before comparisons
+            // Wait for 100 ms between comparisons
             await new Promise(resolve =>
                 setTimeout(() => resolve(), 200)
             )
