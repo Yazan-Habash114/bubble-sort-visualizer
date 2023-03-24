@@ -8,6 +8,9 @@ HTML, CSS and JavaScript project to visualize the bubble sort algorithm, you can
 <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> 
 </a>
+<a href="https://www.w3schools.com/js/default.asp" target="_blank" rel="noreferrer">
+  <img src="https://www.growingsearch.com/blog/wp-content/uploads/2019/02/Javascript-shield-450x445.png" alt="javascript" width="40" height="40"/>
+</a>
 
 ## GitHub page link
 You can visit the deployed project using GitHub pages from [here](https://yazan-habash114.github.io/bubble-sort-visualizer/)
