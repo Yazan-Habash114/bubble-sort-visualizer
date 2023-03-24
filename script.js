@@ -71,6 +71,7 @@ function swap(el1, el2) {
             }, speed)
         })
     })
+
 }
 
 async function bubble_sort() {
@@ -81,7 +82,7 @@ async function bubble_sort() {
             blocks[j].style.backgroundColor = "#feca57"
             blocks[j + 1].style.backgroundColor = "#feca57"
 
-            // Waiting for 100 ms before comparisons
+            // Waiting for 100 ms between comparisons
             await new Promise(resolve =>
                 setTimeout(() => resolve(), 200)
             )

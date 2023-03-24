@@ -16,13 +16,13 @@ section {
     margin-top: 1rem;
     overflow-x: scroll;
     padding: 10px;
-    background-color: #c8d6e5;
+    background-color: #ddd;
     border-radius: 10px;
 }
 
 .block {
     width: 28px;
-    background-color: #8395a7;
+    background-color: #444;
     position: absolute;
     bottom: 0px;
     transition: 0.2s all ease;
@@ -44,14 +44,15 @@ button {
     width: 140px;
     border: none;
     border-radius: 5px;
-    background-color: #feca57;
+    background-color: #FF3300;
     transition: 400ms;
     margin: 2rem 0;
     font-size: 20px;
 }
 
 button:hover {
-    background-color: #ff9f43;
+    background-color: #c22700;
+    color: #ddd;
 }
 
 input {
