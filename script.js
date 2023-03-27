@@ -43,9 +43,11 @@ function clear_blocks() {
 
 function create_block(random, i) {
     let block = document.createElement('div');
+    let blockWidth = (window.innerWidth / size) - 2;
     block.classList.add('block');
     block.style.height = `${random * 3}px`;
-    block.style.transform = `translate(${i * 18}px)`;
+    block.style.width = `${blockWidth}px`;
+    block.style.transform = `translate(${i * (blockWidth + 2)}px)`;
     return block;
 }
 
